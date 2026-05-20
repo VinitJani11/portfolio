@@ -4,13 +4,15 @@ import { Github, Linkedin, Mail, MapPin, Phone, Database, Terminal, Cpu, Target,
 import { SiPython, SiMysql, SiPostgresql, SiJavascript, SiHtml5, SiCss3, SiFlask, SiFastapi, SiNumpy, SiPandas, SiScikitlearn } from "react-icons/si";
 import { Button } from "@/components/ui/button";
 
-import certExcellencePdf from "@assets/Certificate_of_Excellence_-_Vinitkumar_Jani_1779190229072.pdf";
-import certInternshipPdf from "@assets/Certificate_of_Internship_Completion_-_Vinitkumar_Jani_1779190229073.pdf";
-import certModulePdf from "@assets/Certificate_of_Module_Completion_-_Vinitkumar_Jani_1779190229073.pdf";
-import certSqlPdf from "@assets/CertificateOfCompletion_Learning_SQL_Programming_(1)_1779190215966.pdf";
-import certMysqlPdf from "@assets/CertificateOfCompletion_MySQL_Essential_Training_1779190215969.pdf";
-import letterRecommendationPdf from "@assets/Letter_of_recommendation_-_Vinitkumar_Harekrushnabhai_Jani_1779190229073.pdf";
-import traineeshipPdf from "@assets/Traineeship_Experience_Letter_-_Vinitkumar_Harekrushnabhai_Jan_1779190229074.pdf";
+const BASE = import.meta.env.BASE_URL.replace(/\/$/, "");
+
+const certExcellencePdf = `${BASE}/certificates/Certificate_of_Excellence_-_Vinitkumar_Jani_1779190229072.pdf`;
+const certInternshipPdf = `${BASE}/certificates/Certificate_of_Internship_Completion_-_Vinitkumar_Jani_1779190229073.pdf`;
+const certModulePdf = `${BASE}/certificates/Certificate_of_Module_Completion_-_Vinitkumar_Jani_1779190229073.pdf`;
+const certSqlPdf = `${BASE}/certificates/CertificateOfCompletion_Learning_SQL_Programming_(1)_1779190215966.pdf`;
+const certMysqlPdf = `${BASE}/certificates/CertificateOfCompletion_MySQL_Essential_Training_1779190215969.pdf`;
+const letterRecommendationPdf = `${BASE}/certificates/Letter_of_recommendation_-_Vinitkumar_Harekrushnabhai_Jani_1779190229073.pdf`;
+const traineeshipPdf = `${BASE}/certificates/Traineeship_Experience_Letter_-_Vinitkumar_Harekrushnabhai_Jan_1779190229074.pdf`;
 
 const GITHUB_PROFILE = "https://github.com/VinitJani11";
 
