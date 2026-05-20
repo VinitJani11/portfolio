@@ -26,6 +26,40 @@ jobs:
       - name: Use standalone package.json
         run: cp package.gh.json package.json
 
+      - name: Write standalone tsconfig.json
+        run: |
+          cat > tsconfig.json << 'EOF'
+          {
+            "include": ["src/**/*"],
+            "exclude": ["node_modules", "build", "dist", "**/*.test.ts"],
+            "compilerOptions": {
+              "isolatedModules": true,
+              "lib": ["es2022", "esnext", "dom", "dom.iterable"],
+              "module": "esnext",
+              "target": "es2022",
+              "moduleResolution": "bundler",
+              "jsx": "preserve",
+              "noEmit": true,
+              "noEmitOnError": true,
+              "noImplicitAny": true,
+              "noImplicitThis": true,
+              "noImplicitReturns": true,
+              "noFallthroughCasesInSwitch": true,
+              "strictNullChecks": true,
+              "strictBindCallApply": true,
+              "strictPropertyInitialization": true,
+              "alwaysStrict": true,
+              "skipLibCheck": true,
+              "resolveJsonModule": true,
+              "allowImportingTsExtensions": true,
+              "types": ["node", "vite/client"],
+              "paths": {
+                "@/*": ["./src/*"]
+              }
+            }
+          }
+          EOF
+
       - name: Install dependencies
         run: npm install
 
