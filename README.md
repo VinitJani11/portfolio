@@ -89,8 +89,8 @@ Right Click → Open with Live Server
 Add screenshots of your portfolio here:
 
 ```markdown
-![Home Page](assets/screenshots/home.png)
-![Projects Section](assets/screenshots/projects.png)
+![Home Page](assets/home.png)
+![Projects Section](assets/projects.png)
 ```
 
 ## 🎯 Future Improvements
