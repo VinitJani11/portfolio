@@ -84,14 +84,17 @@ Simply open `index.html` in your browser or use a local development server:
 Right Click → Open with Live Server
 ```
 
+
+
 ## 📸 Screenshots
 
-Add screenshots of your portfolio here:
+### Home Page
 
-```markdown
 ![Home Page](assets/home.png)
-![Projects Section](assets/projects.png)
-```
+
+### Projects Section
+
+![Projects Section](assets/project.png)
 
 ## 🎯 Future Improvements
 
