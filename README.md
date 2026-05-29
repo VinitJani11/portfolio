@@ -32,16 +32,20 @@ The website is designed to provide recruiters, collaborators, and potential clie
 ## 🛠️ Tech Stack
 
 ### Frontend
+- React
+- TypeScript
+- Vite
+- Tailwind CSS
+- Framer Motion
 
-* HTML5
-* CSS3
-* JavaScript
+### UI Components
+- Radix UI
+- Lucide React
+- React Icons
 
-### Tools & Deployment
-
-* GitHub Pages
-* Git
-* GitHub
+### Deployment
+- GitHub Pages
+- GitHub Actions
 
 ## 📂 Project Structure
 
