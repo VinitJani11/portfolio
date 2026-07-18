@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
-import { Github, Linkedin, Mail, MapPin, Phone, Database, Terminal, Cpu, Target, ExternalLink, BarChart2, PieChart, FileText, Award } from "lucide-react";
-import { SiPython, SiMysql, SiPostgresql, SiJavascript, SiHtml5, SiCss3, SiFlask, SiFastapi, SiNumpy, SiPandas, SiScikitlearn } from "react-icons/si";
+import { Github, Linkedin, Mail, MapPin, Phone, Database, Terminal, Cpu, Target, ExternalLink, BarChart2, PieChart, FileText, Award, Wifi, Smartphone, Globe, Zap } from "lucide-react";
+import { SiPython, SiMysql, SiPostgresql, SiJavascript, SiHtml5, SiCss3, SiFlask, SiFastapi, SiNumpy, SiPandas, SiScikitlearn, SiArduino, SiMqtt } from "react-icons/si";
 import { Button } from "@/components/ui/button";
 
 const BASE = import.meta.env.BASE_URL.replace(/\/$/, "");
@@ -26,9 +26,28 @@ const navItems = [
 
 const projects = [
   {
+    title: "Smart Shelf IoT System",
+    tech: "ESP32 • DHT22 • MQTT • Adafruit IO • Expo",
+    links: [
+      { label: "GitHub", icon: "github", url: "https://github.com/VinitJani11/smart-fridge-iot" },
+      { label: "Live Dashboard", icon: "globe", url: "https://vinitjani11.github.io/smart-fridge-iot/" },
+      { label: "Wokwi Simulation", icon: "zap", url: "https://wokwi.com/projects/464730115732465665" },
+      { label: "Android App", icon: "smartphone", url: "https://expo.dev/accounts/vinit111/projects/fridge-mobile/builds/5dcb023f-5989-4a46-b341-5ecd378b7a89" },
+    ],
+    description: "End-to-end IoT smart shelf system for reducing retail food waste. An ESP32 monitors temperature, humidity, mango weight, milk stock, and door status — triggering real-time local alerts (LED, buzzer, LCD) and publishing live data to a cloud dashboard and Android app via MQTT.",
+    metrics: [
+      "IoT Level 4 architecture (Bahga & Madisetti) — cloud + edge processing",
+      "Custom web dashboard + native Android app (Expo) for remote monitoring",
+      "Under £30 prototype cost; 38% spoilage reduction potential (Wu et al., 2025)",
+      "OWASP IoT Top 10 security framework applied; GDPR compliant"
+    ]
+  },
+  {
     title: "VigilAI — Real-Time Surveillance Ecosystem",
     tech: "YOLOv26-Nano • FastAPI • Tailwind • Roboflow",
-    github: "https://github.com/VinitJani11/VigilAI",
+    links: [
+      { label: "GitHub", icon: "github", url: "https://github.com/VinitJani11/VigilAI" },
+    ],
     description: "AI-Driven Real-Time Surveillance Ecosystem. Achieved 32 FPS on consumer CPUs with mAP 0.825. Built with a FastAPI backend handling Base64 frame transmission and a Tailwind + Vanilla JS frontend.",
     metrics: [
       "Biometric face recognition + Explainable AI (Grad-CAM, LIME)",
@@ -39,7 +58,9 @@ const projects = [
   {
     title: "London Crime Analytics Engine",
     tech: "SQL (MySQL) • XGBoost • Prophet • Power BI",
-    github: "https://github.com/VinitJani11/london-crime-analysis-2008-2016",
+    links: [
+      { label: "GitHub", icon: "github", url: "https://github.com/VinitJani11/london-crime-analysis-2008-2016" },
+    ],
     description: "Analyzed 13M+ police records using SQL Star Schema with weather data integration. Generated evidence-based seasonal staffing recommendations for Westminster Police.",
     metrics: [
       "40% query latency reduction via SQL Indexes & CTEs",
@@ -50,7 +71,9 @@ const projects = [
   {
     title: "MediTrack — Hospital Management System",
     tech: "Python • MySQL • Tkinter",
-    github: "https://github.com/VinitJani11/MediTrack-Hospital-Management-System",
+    links: [
+      { label: "GitHub", icon: "github", url: "https://github.com/VinitJani11/MediTrack-Hospital-Management-System" },
+    ],
     description: "Centralized patient records and appointment scheduling system. Implemented normalized database schema for robust data integrity and efficient management.",
     metrics: [
       "QuickSort + MergeSort for 40% record retrieval speed increase",
@@ -61,7 +84,9 @@ const projects = [
   {
     title: "Journey Advisor — UK Travel Planner",
     tech: "Flask • MySQL • MVC",
-    github: "https://github.com/VinitJani11/Journey-Advisor",
+    links: [
+      { label: "GitHub", icon: "github", url: "https://github.com/VinitJani11/Journey-Advisor" },
+    ],
     description: "Full-stack UK travel planner featuring smart-search, secure session management, and integrated utility tools for travellers.",
     metrics: [
       "Carbon footprint + journey cost calculator integration",
@@ -72,7 +97,9 @@ const projects = [
   {
     title: "Mobile Phone Selection System",
     tech: "Python • SQL • Decision Logic",
-    github: "https://github.com/VinitJani11/Mobile-Phone-Selection-System",
+    links: [
+      { label: "GitHub", icon: "github", url: "https://github.com/VinitJani11/Mobile-Phone-Selection-System" },
+    ],
     description: "An intelligent recommendation system that guides users through a structured selection process to find the best-fit mobile phone based on their preferences and requirements.",
     metrics: [
       "Rule-based decision engine for personalised recommendations",
@@ -297,6 +324,11 @@ export default function Home() {
                   icons: [<SiMysql key="mysql"/>, <SiPostgresql key="pg"/>, <Github key="gh"/>]
                 },
                 {
+                  title: "IoT & Embedded Systems",
+                  skills: ["ESP32 Microcontroller", "Arduino C++ Firmware", "MQTT Protocol", "DHT22 Sensor Integration", "Adafruit IO Cloud", "Wokwi Simulation", "Expo (React Native)"],
+                  icons: [<SiArduino key="ard"/>, <Wifi key="wifi"/>]
+                },
+                {
                   title: "Business Intelligence",
                   skills: ["Requirements Gathering", "Gap Analysis", "KPI Tracking", "Stakeholder Management", "GDPR", "NIST AI Risk Framework"],
                   icons: [<Target key="tgt"/>]
@@ -353,15 +385,23 @@ export default function Home() {
                     <div className="text-xs font-mono text-primary mb-4">{String(idx + 1).padStart(2, '0')} // PROJECT</div>
                     <h3 className="text-2xl font-display font-bold mb-2 group-hover:text-primary transition-colors">{project.title}</h3>
                     <div className="text-sm font-mono text-muted-foreground mb-6">{project.tech}</div>
-                    <a
-                      href={project.github}
-                      target="_blank"
-                      rel="noreferrer"
-                      className="inline-flex items-center gap-2 px-4 py-2 border border-border hover:border-primary hover:text-primary text-muted-foreground text-sm font-mono transition-colors"
-                      data-testid={`project-github-${idx}`}
-                    >
-                      <Github className="w-4 h-4" /> View on GitHub
-                    </a>
+                    <div className="flex flex-wrap gap-2">
+                      {project.links.map((link) => (
+                        <a
+                          key={link.label}
+                          href={link.url}
+                          target="_blank"
+                          rel="noreferrer"
+                          className="inline-flex items-center gap-1.5 px-3 py-1.5 border border-border hover:border-primary hover:text-primary text-muted-foreground text-xs font-mono transition-colors"
+                        >
+                          {link.icon === "github" && <Github className="w-3.5 h-3.5" />}
+                          {link.icon === "globe" && <Globe className="w-3.5 h-3.5" />}
+                          {link.icon === "zap" && <Zap className="w-3.5 h-3.5" />}
+                          {link.icon === "smartphone" && <Smartphone className="w-3.5 h-3.5" />}
+                          {link.label}
+                        </a>
+                      ))}
+                    </div>
                   </div>
                   <div className="lg:col-span-8">
                     <p className="text-muted-foreground mb-6 leading-relaxed">
