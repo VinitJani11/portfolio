@@ -538,7 +538,6 @@ export default function Home() {
               <Github className="w-5 h-5" /> GitHub
             </a>
           </div>
-
           <div className="text-sm text-muted-foreground font-mono opacity-50">
             © {new Date().getFullYear()} Vinitkumar Jani. All rights reserved.
           </div>
