@@ -530,8 +530,15 @@ export default function Home() {
             <a href="tel:07721812382" className="flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors" data-testid="footer-phone">
               <Phone className="w-5 h-5" /> 07721812382
             </a>
-            <a href="https://www.linkedin.com/in/vinitkumar-jani-a82a932a5/?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BOkYOh5l1QYeam88xAYSBOQ%3D%3D/" target="_blank" rel="noreferrer" className="flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors" data-testid="footer-linkedin">
-              <Linkedin className="w-5 h-5" /> LinkedIn
+            <a 
+  href="https://www.linkedin.com/in/vinitkumar-jani-a82a932a5/?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BOkYOh5l1QYeam88xAYSBOQ%3D%3D/" 
+  target="_blank" 
+  rel="noreferrer" 
+  className="flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors" 
+  data-testid="footer-linkedin"
+>
+  <Linkedin className="w-5 h-5" /> LinkedIn
+</a>
             </a>
             <a href={GITHUB_PROFILE} target="_blank" rel="noreferrer" className="flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors" data-testid="footer-github">
               <Github className="w-5 h-5" /> GitHub
