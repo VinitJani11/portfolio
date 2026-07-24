@@ -530,7 +530,7 @@ export default function Home() {
             <a href="tel:07721812382" className="flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors" data-testid="footer-phone">
               <Phone className="w-5 h-5" /> 07721812382
             </a>
-            <a href="https://linkedin.com/in/vinitkumarjani" target="_blank" rel="noreferrer" className="flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors" data-testid="footer-linkedin">
+            <a href="https://www.linkedin.com/in/vinitkumar-jani-a82a932a5/" target="_blank" rel="noreferrer" className="flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors" data-testid="footer-linkedin">
               <Linkedin className="w-5 h-5" /> LinkedIn
             </a>
             <a href={GITHUB_PROFILE} target="_blank" rel="noreferrer" className="flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors" data-testid="footer-github">
