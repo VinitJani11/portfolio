@@ -225,7 +225,7 @@ export default function Home() {
                   <a href="#projects">VIEW WORK</a>
                 </Button>
                 <div className="flex items-center gap-2 ml-4">
-                  <a href="https://linkedin.com/in/vinitkumarjani" target="_blank" rel="noreferrer" className="p-3 border border-border hover:border-primary text-muted-foreground hover:text-primary transition-colors" data-testid="hero-link-linkedin">
+                  <a href="https://www.linkedin.com/in/vinitkumar-jani-a82a932a5/?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BOkYOh5l1QYeam88xAYSBOQ%3D%3D" target="_blank" rel="noreferrer" className="p-3 border border-border hover:border-primary text-muted-foreground hover:text-primary transition-colors" data-testid="hero-link-linkedin">
                     <Linkedin className="w-5 h-5" />
                   </a>
                   <a href={GITHUB_PROFILE} target="_blank" rel="noreferrer" className="p-3 border border-border hover:border-primary text-muted-foreground hover:text-primary transition-colors" data-testid="hero-link-github">
