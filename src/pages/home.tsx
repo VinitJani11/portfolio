@@ -225,7 +225,7 @@ export default function Home() {
                   <a href="#projects">VIEW WORK</a>
                 </Button>
                 <div className="flex items-center gap-2 ml-4">
-                  <a href="https://www.linkedin.com/in/vinitkumar-jani-a82a932a5/?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BOkYOh5l1QYeam88xAYSBOQ%3D%3D" target="_blank" rel="noreferrer" className="p-3 border border-border hover:border-primary text-muted-foreground hover:text-primary transition-colors" data-testid="hero-link-linkedin">
+                  <a href="https://linkedin.com/in/vinitkumarjani" target="_blank" rel="noreferrer" className="p-3 border border-border hover:border-primary text-muted-foreground hover:text-primary transition-colors" data-testid="hero-link-linkedin">
                     <Linkedin className="w-5 h-5" />
                   </a>
                   <a href={GITHUB_PROFILE} target="_blank" rel="noreferrer" className="p-3 border border-border hover:border-primary text-muted-foreground hover:text-primary transition-colors" data-testid="hero-link-github">
@@ -519,7 +519,6 @@ export default function Home() {
       </main>
 
       {/* Footer */}
-      
       <footer className="py-12 border-t border-border/50 bg-background text-center">
         <div className="container mx-auto px-6">
           <h2 className="text-2xl font-display font-bold mb-8">Ready to architect the future?</h2>
@@ -531,21 +530,13 @@ export default function Home() {
             <a href="tel:07721812382" className="flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors" data-testid="footer-phone">
               <Phone className="w-5 h-5" /> 07721812382
             </a>
-            <a href="https://www.linkedin.com/in/vinitkumar-jani-a82a932a5/?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BOkYOh5l1QYeam88xAYSBOQ%3D%3D/" target="_blank" rel="noreferrer" className="flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors" data-testid="footer-linkedin">
+            <a href="https://www.linkedin.com/in/vinitkumar-jani-a82a932a5/?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BOkYOh5l1QYeam88xAYSBOQ%3D%3D" target="_blank" rel="noreferrer" className="flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors" data-testid="footer-linkedin">
               <Linkedin className="w-5 h-5" /> LinkedIn
             </a>
             <a href={GITHUB_PROFILE} target="_blank" rel="noreferrer" className="flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors" data-testid="footer-github">
               <Github className="w-5 h-5" /> GitHub
             </a>
           </div>
-          <div className="text-sm text-muted-foreground font-mono opacity-50">
-            © {new Date().getFullYear()} Vinitkumar Jani. All rights reserved.
-          </div>
-        </div>
-      </footer>
-    </div>
-  );
-}
 
           <div className="text-sm text-muted-foreground font-mono opacity-50">
             © {new Date().getFullYear()} Vinitkumar Jani. All rights reserved.
