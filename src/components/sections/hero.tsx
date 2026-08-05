@@ -137,7 +137,7 @@ export function Hero() {
             <img
               src={avatarUrl}
               alt="Vinitkumar Jani"
-              className="absolute inset-0 w-full h-full object-cover object-top rounded-full border-4 border-background shadow-xl hover-elevate transition-transform duration-500 hover:scale-[1.02]"
+              className="absolute inset-0 w-full h-full object-cover object-[center_10%] rounded-full border-4 border-background shadow-xl hover-elevate transition-transform duration-500 hover:scale-[1.02]"
             />
           </div>
         </motion.div>
@@ -145,3 +145,4 @@ export function Hero() {
     </section>
   );
 }
+

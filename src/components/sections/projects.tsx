@@ -86,20 +86,20 @@ const PROJECTS: Project[] = [
   },
 ];
 
-function ImageCarousel({ images, title }: { images: string[]; title: string }) {
+function ImageCarousel({ images, title, square = false }: { images: string[]; title: string; square?: boolean }) {
   const [current, setCurrent] = useState(0);
 
   const prev = () => setCurrent((c) => (c - 1 + images.length) % images.length);
   const next = () => setCurrent((c) => (c + 1) % images.length);
 
   return (
-    <div className="relative group rounded-2xl overflow-hidden border border-border shadow-md bg-muted aspect-video">
+    <div className="relative group rounded-2xl overflow-hidden border border-border shadow-md bg-muted ${square ? `aspect-square` : `aspect-video`}">
       <AnimatePresence mode="wait">
         <motion.img
           key={current}
           src={images[current]}
           alt={`${title} screenshot ${current + 1}`}
-          className="w-full h-full object-cover object-top"
+          className={`w-full h-full object-cover ${square ? "object-center" : "object-top"}`}
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
@@ -182,7 +182,7 @@ export function Projects() {
               >
                 {/* Image carousel */}
                 <div className="w-full lg:w-1/2">
-                  <ImageCarousel images={project.images} title={project.title} />
+                  <ImageCarousel images={project.images} title={project.title} square={idx === 0} />
                   {project.images.length > 1 && (
                     <p className="text-xs text-muted-foreground mt-2 text-center">
                       Hover to browse {project.images.length} screenshots
@@ -232,3 +232,7 @@ export function Projects() {
     </section>
   );
 }
+
+
+
+
