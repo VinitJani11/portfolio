@@ -78,7 +78,7 @@ export function Hero() {
                     animate={{ y: 0, opacity: 1 }}
                     exit={{ y: '-100%', opacity: 0 }}
                     transition={{ duration: 0.5, ease: 'backOut' }}
-                    className="absolute inset-0 text-3xl md:text-4xl lg:text-5xl text-secondary-foreground/80 font-sans font-medium"
+                    className="absolute inset-0 text-3xl md:text-4xl lg:text-5xl text-foreground/70 font-sans font-medium"
                   >
                     {ROLES[roleIndex]}
                   </motion.span>
@@ -145,4 +145,5 @@ export function Hero() {
     </section>
   );
 }
+
 
